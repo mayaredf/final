@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fjdsfdfgu = new System.Windows.Forms.Label();
+            this.outputLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -43,14 +43,14 @@
             this.userHealthLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // fjdsfdfgu
+            // outputLabel
             // 
-            this.fjdsfdfgu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fjdsfdfgu.Location = new System.Drawing.Point(1, 294);
-            this.fjdsfdfgu.Name = "fjdsfdfgu";
-            this.fjdsfdfgu.Size = new System.Drawing.Size(238, 103);
-            this.fjdsfdfgu.TabIndex = 0;
-            this.fjdsfdfgu.Text = "output";
+            this.outputLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.outputLabel.Location = new System.Drawing.Point(1, 294);
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(238, 103);
+            this.outputLabel.TabIndex = 0;
+            this.outputLabel.Text = "output";
             // 
             // label1
             // 
@@ -81,6 +81,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -124,9 +125,9 @@
             this.hpLabel.BackColor = System.Drawing.Color.Transparent;
             this.hpLabel.Location = new System.Drawing.Point(348, 266);
             this.hpLabel.Name = "hpLabel";
-            this.hpLabel.Size = new System.Drawing.Size(38, 13);
+            this.hpLabel.Size = new System.Drawing.Size(44, 13);
             this.hpLabel.TabIndex = 8;
-            this.hpLabel.Text = "XX/25";
+            this.hpLabel.Text = "XX/150";
             // 
             // label4
             // 
@@ -181,7 +182,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.fjdsfdfgu);
+            this.Controls.Add(this.outputLabel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -191,7 +192,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label fjdsfdfgu;
+        private System.Windows.Forms.Label outputLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
