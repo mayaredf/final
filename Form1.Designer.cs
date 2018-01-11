@@ -1,6 +1,6 @@
 ﻿namespace final
 {
-    partial class Form1
+    partial class Final
     {
         /// <summary>
         /// Required designer variable.
@@ -165,7 +165,7 @@
             this.userHealthLabel.Size = new System.Drawing.Size(138, 15);
             this.userHealthLabel.TabIndex = 12;
             // 
-            // Form1
+            // Final
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,8 +183,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.outputLabel);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Final";
+            this.Text = "Final";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace final
 {
-    public partial class Form1 : Form
+    public partial class Final : Form
         
     {
         int playerhp = 150;
@@ -21,20 +21,11 @@ namespace final
         int accuracy;
         int critical;
 
-        public Form1()
+        public Final()
         {
             InitializeComponent();
             
-            if (playerhp == 0) ;
-            {
-                outputLabel.Text = "Game Over";
-
-            }
-            if (rivalhp == 0) ;
-            {
-                outputLabel.Text = "You Win!";
-
-            }
+          
           
 
 
@@ -53,6 +44,17 @@ namespace final
             g2.FillRectangle(drawBrush, 0, 0, playerhp, 15);
 
             hpLabel.Text = playerhp + "/150";
+
+            if (playerhp == 0)
+            {
+                outputLabel.Text = "Game Over";
+
+            }
+            if (rivalhp == 0)
+            {
+                outputLabel.Text = "You Win!";
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
