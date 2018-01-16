@@ -15,6 +15,8 @@ namespace final
     public partial class Final : Form
         
     {
+        Random randGen = new Random();
+
         int playerhp = 150;
         int rivalhp = 150;
         int percentHealth;
@@ -24,17 +26,12 @@ namespace final
         public Final()
         {
             InitializeComponent();
-            
-          
-          
-
-
-
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            playerhp -= 10;
+            
             Graphics g = rivalHealthLabel.CreateGraphics();
             Pen drawPen = new Pen(Color.LightGreen, 10);
             SolidBrush drawBrush = new SolidBrush(Color.LightGreen);
@@ -44,6 +41,25 @@ namespace final
             g2.FillRectangle(drawBrush, 0, 0, playerhp, 15);
 
             hpLabel.Text = playerhp + "/150";
+
+            accuracy = randGen.Next(1, 101);
+            critical = randGen.Next(1, 17);
+
+            if (accuracy < 95)
+            {
+                playerhp -= 10;
+                outputLabel.Text = "";
+                if (critical == 1)
+                {
+                    playerhp -= 15;
+                    outputLabel.Text = "A critical hit!";
+                }
+            }
+            if (accuracy > 95)
+            {
+                outputLabel.Text = "The attack missed!";
+
+            }
 
             if (playerhp == 0)
             {
@@ -59,7 +75,7 @@ namespace final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            playerhp = 150;  
         }
     }
 }
