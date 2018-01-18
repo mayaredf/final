@@ -26,7 +26,6 @@ namespace final
         public Final()
         {
             InitializeComponent();
-           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,18 +33,15 @@ namespace final
             
             Graphics g = rivalHealthLabel.CreateGraphics();
             Pen drawPen = new Pen(Color.LightGreen, 10);
-            SolidBrush drawBrush = new SolidBrush(Color.LightGreen);
-            g.FillRectangle(drawBrush, 0, 0, rivalhp, 15);
+            SolidBrush drawBrush = new SolidBrush(Color.LightGreen);          
             Graphics g2 = userHealthLabel.CreateGraphics();
-            g2.Clear(Color.Red);
-            g2.FillRectangle(drawBrush, 0, 0, playerhp, 15);
 
-            hpLabel.Text = playerhp + "/150";
+
 
             accuracy = randGen.Next(1, 101);
             critical = randGen.Next(1, 17);
 
-            if (accuracy < 95)
+            if (accuracy <= 50)
             {
                 playerhp -= 10;
                 outputLabel.Text = "";
@@ -55,22 +51,25 @@ namespace final
                     outputLabel.Text = "A critical hit!";
                 }
             }
-            if (accuracy > 95)
+            if (accuracy > 50)
             {
                 outputLabel.Text = "The attack missed!";
-
             }
 
-            if (playerhp == 0)
+            if (playerhp <= 0)
             {
                 outputLabel.Text = "Game Over";
-
             }
-            if (rivalhp == 0)
+            if (rivalhp <= 0)
             {
                 outputLabel.Text = "You Win!";
-
             }
+
+            g.FillRectangle(drawBrush, 0, 0, rivalhp, 15);
+            g2.Clear(Color.Red);
+            g2.FillRectangle(drawBrush, 0, 0, playerhp, 15);
+
+            hpLabel.Text = playerhp + "/150";
         }
 
         private void button2_Click(object sender, EventArgs e)

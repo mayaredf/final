@@ -162,7 +162,7 @@
             this.userHealthLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userHealthLabel.Location = new System.Drawing.Point(229, 251);
             this.userHealthLabel.Name = "userHealthLabel";
-            this.userHealthLabel.Size = new System.Drawing.Size(138, 15);
+            this.userHealthLabel.Size = new System.Drawing.Size(150, 15);
             this.userHealthLabel.TabIndex = 12;
             // 
             // Final
