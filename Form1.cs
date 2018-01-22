@@ -31,11 +31,13 @@ namespace final
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //graphics
             Graphics g = rivalHealthLabel.CreateGraphics();
             Pen drawPen = new Pen(Color.LightGreen, 10);
             SolidBrush drawBrush = new SolidBrush(Color.LightGreen);
             Graphics g2 = userHealthLabel.CreateGraphics();
 
+            //random
             accuracy = randGen.Next(1, 101);
             critical = randGen.Next(1, 17);
 
@@ -54,7 +56,7 @@ namespace final
             }
             if (accuracy > 95)
             {
-                outputLabel.Text = "The attack missed!";
+                outputLabel.Text = "Your attack missed!";
             }
 
             if (playerhp <= 0)
@@ -66,7 +68,7 @@ namespace final
                 outputLabel.Text = "You Win!";
                 hpLabel.Text = "0/150";
             }
-
+            //health bars
             g.Clear(Color.Gray);
             g.FillRectangle(drawBrush, 0, 0, rivalhp, 15);
 
@@ -105,7 +107,7 @@ namespace final
             }
             if (accuracy > 95)
             {
-                outputLabel.Text = "The attack missed!";
+                outputLabel.Text = "The opponent's attack missed!";
             }
 
             if (playerhp <= 0)
@@ -117,7 +119,7 @@ namespace final
             {
                 outputLabel.Text = "You Win!";
             }
-
+            //health bars
             g.Clear(Color.Gray);
             g.FillRectangle(drawBrush, 0, 0, rivalhp, 15);
 
