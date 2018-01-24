@@ -131,12 +131,12 @@ namespace final
 
         private void button2_Click(object sender, EventArgs e)
         {
-            playerhp = 150;  
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            rivalhp = 150;
+            
         }
     }
 }
